@@ -1,0 +1,42 @@
+#%RAML 1.0
+title: calculator-experience-api
+version: v0
+protocols:
+  - HTTPS
+traits:
+  reuse: !include traits/trait.raml
+mediaType: application/json
+/addition:
+  get:
+    is: [reuse]            
+    responses:
+      200:
+        body:
+           example: !include /Examples/addition-response.json            
+/subtraction:
+  patch:
+    is: [reuse] 
+    responses:
+      200:
+        body:
+            example: !include Examples/subtraction-response.json
+/division:
+  post:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include Examples/dividion-response.json
+/multiplication:
+  post:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include Examples/multiplication-response.json
+
+      
+      
+                              
+                                                                                         
+                                              
